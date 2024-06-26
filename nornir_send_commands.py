@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+'''
+This script will ask for a list of commands to be executed against all hosts defined in ./inventory/hosts.csv (no filtering).
+The output will be displayed in the shell as well as written to files (one file per command, per device) in the ./output directory (which need be present).
+'''
 
 from nornir import InitNornir
 from nornir_csv.plugins.inventory import CsvInventory
@@ -50,7 +54,7 @@ def main():
 	r = nr.run(task=send_command)
 	print_result(r) 
 	w = nr.run(task=write_output)
-	print_result(w)
+	#print_result(w)
 
 if __name__ == "__main__":
     main()
