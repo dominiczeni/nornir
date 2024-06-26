@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 '''
 This script will ask for a list of commands to be executed against all hosts defined in ./inventory/hosts.csv (no filtering).
-Since there is no filtering, to successfully run commands against all hosts in hosts.csv the hosts must all use the same credentials (input once at runtime) and
-the hosts must all accept the same commands.
+
+Since there is no filtering, to successfully run commands against all hosts in hosts.csv the hosts must all:
+1) use the same credentials (user is interviewed for credentials at runtime)
+2) the commands input must be valid across all devices
+
 The output will be displayed in the shell as well as written to files (one file per command, per device) in the ./output directory (which need be present).
 '''
 
