@@ -1,4 +1,4 @@
-Example of content for the nornir config file leveraging the [nornir-csv](https://github.com/matman26/nornir_csv) inventory plugin.
+Example of content for the nornir YAML config file leveraging the [nornir-csv](https://github.com/matman26/nornir_csv) inventory plugin.
 
 ```
 inventory:
