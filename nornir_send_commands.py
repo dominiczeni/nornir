@@ -22,7 +22,8 @@ def send_command(task):
 	for c in cmd_list:
 		task.run(
     		task=netmiko_send_command,
-    		command_string=c
+    		command_string=c,
+            read_timeout=90
 		)
 
 def write_output(task):
@@ -59,8 +60,7 @@ def main():
 	r = nr.run(task=send_command)
 	print_result(r) 
 	w = nr.run(task=write_output)
-	#print_result(w)
+	print_result(w)
 
 if __name__ == "__main__":
     main()
-
