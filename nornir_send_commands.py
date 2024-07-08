@@ -23,7 +23,7 @@ def send_command(task):
 		task.run(
     		task=netmiko_send_command,
     		command_string=c,
-            read_timeout=90
+                read_timeout=90
 		)
 
 def write_output(task):
